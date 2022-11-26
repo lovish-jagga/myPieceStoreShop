@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+*
+{
+	box-sizing:border-box;
+}
+
+.carousel-control-next:hover,.carousel-control-prev:hover
+{
+	background-color: #d4ebf3;
+	transition: background-color 1.2s ease-in-out;	
+}
+.backdrop
+{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color:rgba(0,0,0,0.5);
+}
+.visible
+{
+	display:flex;
+}
+.invisible
+{
+	display:none;
+}
+.logo-icon
+{
+	margin-top:2px;
+	width:10%;
+	height: 100%;	
+	margin-left:20px;
+}
+
+.navbar
+{
+	background-color: white;
+    width: 100%;
+    position: fixed;
+    height: 5.5rem;
+    top: 0px;
+    left: 0;
+    z-index: 100;
+}
+a.logo-text,i.logo-text
+{
+	font-size:1rem;
+	cursor:pointer;
+	font-weight:bold;
+	color:black;
+	text-decoration:none;
+}
+
+a.logo-text:hover,i.logo-text:hover
+{
+	color:red;
+}
+.sale-section
+{
+	background-color: black;
+	color:white;
+	width:100%;
+	height:2.2rem;
+	text-align:center;
+	vertical-align:center;
+	padding:0.5rem;
+	margin-top:6rem;
+	margin-bottom:0.5rem;
+}
+.logo-btn
+{
+	background-color:white;
+}
+
+.gradient-custom-3 {
+background: #84fab0;
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+.gradient-custom-4 {
+background: #84fab0;
+background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+.shopNow {
+    color: #CEBD9C !important;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    outline: medium none;
+    text-decoration:none;
+    transition: all .3s ease-out 0s;
+    text-underline-position: under;
+    cursor:pointer;
+}
+.shopNow:hover
+{
+	letter-spacing: 1px;
+}
+
+.firstCarousel, div.secondCarousel
+{
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;                
+}
+div.secondCarousel
+{
+	flex-direction:row-reverse;
+	justify-content:flex-start;
+}
+.firstCarousel__heading,div.secondCarousel__heading
+{
+	width:40%;
+	margin:6rem;
+	text-align:center;
+	list-style:none;
+}
+div.secondCarousel__heading
+{
+	margin:1rem;
+	text-align:-webkit-match-parent;
+	justify-content:flex-start;
+}
+.firstCarousel__heading li h1,div.secondCarousel__heading li h1
+{
+	height: 30%;
+	color: #FF2020;
+    font-family: "Clicker Script",cursive;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 1px;
+    display: block;	
+}
+.firstCarousel__heading li h2
+{
+	font-family: 'Clicker Script', cursive;
+	font-family: 'Lato', sans-serif;
+	height: 30%;
+  	margin-right:1.5rem;
+  	animation-name: textEffect;
+  	animation-duration: 4s;
+  	animation-iteration-count: 1;
+  	font-weight:bolder;
+	font-size:xx-large;	
+}
+
+div.secondCarousel__heading li h2
+{
+	font-family: 'Clicker Script', cursive;
+	font-family: 'Lato', sans-serif;
+	height: 30%;
+  	margin-right:1.5rem;
+	font-weight:bolder;
+	font-size:xx-large;	
+
+}
+
+@keyframes textEffect
+{
+  from  {font-size:0px;}
+ 	to {font-size: xx-large;}
+}
+
+.firstCarousel__heading li button,div.secondCarousel__heading li button
+{
+	height: 30%;
+	padding: 10px 40px;
+	cursor:pointer;
+	transform:rotateZ(0deg);
+	animation: buttonEffect 2s 1;	
+	transition:animation 2s fade-in;
+	background-color:black;
+	color:white;
+}
+@keyframes buttonEffect
+{
+   0% {transform:rotateZ(0deg); }
+   50% {transform:rotateZ(5deg); }
+   100% {transform:rotateZ(-5deg);}
+}
+
+.firstCarousel__heading li button:hover,.firstCarousel__heading li button:focus,
+div.secondCarousel__heading li button:hover,div.secondCarousel__heading li button:focus
+{
+	background-color:whitesmoke;
+	color:black;
+}
+
+
+
+.lineUp {
+  animation: 2s anim-lineUp ease-out 1;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+div.container
+{
+	margin:1rem auto;
+	height:21rem;
+	width:100%;
+}
+div.container__fashion
+{
+	display:flex;
+	flex-direction:row;
+	margin:1rem auto;
+	height:100%;
+}
+a.card1,a.card2,a.card3
+{
+	display: flex;
+    margin: 1rem;
+	width:100%;
+	height:100%;
+	flex-direction:column-reverse;
+	text-align:center;
+	color:white;
+}
+a.card1
+{
+	background:linear-gradient(to top, rgba(0,0,0,0.8),transparent),url("../Image/Men's Fashion.png") left 40% bottom 77% /cover no-repeat border-box;
+}
+a.card2
+{
+	background:linear-gradient(to top, rgba(0,0,0,0.8),transparent),url("../Image/Women's Fashion.png") left 40% bottom 77% /cover no-repeat border-box;
+}
+a.card3
+{
+	background:linear-gradient(to top, rgba(0,0,0,0.8),transparent),url("../Image/Baby Fashion.png") left 40% bottom 77% /cover no-repeat border-box;
+}
+.contact__container
+{
+	margin-top:2rem !important;
+	padding:1rem;
+	overflow:hidden;
+}
+.contact,div.contact__info
+{
+	margin:1rem;
+	margin-bottom: auto;
+	text-align:center;
+	background-color:grey;
+}
+
+.footer__container
+{
+	height:4rem;
+	width:100%;
+	background-color:rgba(0, 0, 0, 0.2);
+	vertical-align:center;
+}
+div.footer__container__content
+{
+	margin:0rem;
+	display:flex;
+	justify-content:center;
+	width:100%;
+	align-items:center;
+}
+a.footer__socials
+{
+	margin-top:1rem;
+	display:flex;
+	flex-direction:column;
+	width:5rem;
+	height:3rem;
+}
+div.footer__copyright
+{
+	text-align:center;
+}
+
+
+
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.valid {
+  color: green;
+}
+.invalid {
+  color: red;
+}
